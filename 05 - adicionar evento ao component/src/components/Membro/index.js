@@ -16,21 +16,21 @@ class Membro extends Component{
     }
 
     entrar(){
-        this.setState({nome: "Italo"});
+        this.setState({nome: 'Italo'});
     }
 
     sair(){
-        this.setState({nome: "Visitante"});
+        this.setState({nome: 'Visitante'});
     }
 
     render(){
         return(
             <div>
-                <h2>{this.props.nome}</h2>
-                <button onClick={entrar}>
+                <h2>Bem vindo(a): {this.state.nome}</h2>
+                <button onClick={this.entrar}>
                     Entrar como Italo
                 </button>
-                <button onClick={sair}>
+                <button onClick={this.sair}>
                     Sair
                 </button>
             </div>
