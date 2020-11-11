@@ -24,6 +24,12 @@ import React, { Component } from 'react';
  * 3 - event.target
  * Retorna o elemento no qual o evento foi adicionado 
  * 
+ * 4 - Atributo value na tag <option>.
+ * Quando seleciono a option, o valor que o elemento html guarda 
+ * é o valor especificado no atributo value e não o conteúdo da tag.
+ * Caso o atributo value não seja especificado, o valor que ficará 
+ * no elemento html é o valor do conteúdo da tag.
+ * 
  * 5 - Atributo value na tag <option>.
  * Tag essa que fica dentro da tag <select>.
  * Quando seleciono a option, o valor que o elemento html guarda 
