@@ -16,10 +16,15 @@ import React, { Component } from 'react';
  * Evento esse que chama uma função, especificada por mim,
  * quando acontece alguma mudança ao elemento html
  * 
- * 3 - event.target
- * Retorna o elemento no qual o evento foi adicionado
+ * IMPORTANTE: Se eu disser que o valor da tag é um valor 
+ * do objeto state do component não adicionar o evento 
+ * onChange no elemento html (num input, por exemplo), o 
+ * usuário não poderá iserir valor nele 
  * 
- * 4 - Atributo value na tag <option>.
+ * 3 - event.target
+ * Retorna o elemento no qual o evento foi adicionado 
+ * 
+ * 5 - Atributo value na tag <option>.
  * Tag essa que fica dentro da tag <select>.
  * Quando seleciono a option, o valor que o elemento html guarda 
  * é o valor especificado no atributo value e não o conteúdo da tag.
