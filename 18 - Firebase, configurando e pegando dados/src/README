@@ -1,31 +1,31 @@
-#Fire base
+Fire base
 	É um serviço do google que permite criar uma API sem precisar usar uma linguagem de programação.
 
 	Possui plano gratuito e pago.
 
-##Criar aplicação web
+Criar aplicação web
 	preciso criar app web
 
-##Database
+Database
 	criar realtime database.
 	opções: 
 		locked mode: só deixa acessar se tiver autenticação
 		test mode: qualquer pessoa pode acessar o data base
 
-	###Usaremos um BD noSQL
+	Usaremos um BD noSQL
 		funciona como uma árvore.
 		Ex: um nó representa as entidades Users, cada User tem um nó filho id que identifica cada user,
 		    cada nó id tem nós filhos que representam seus atributos.
 
-	###Criando
+	Criando
 		após selecionar a opção (test mode ou locked mode) criaremos a estrutra (árvore).
 		é só ir clicando no + para adicionar nós filhos. Depois clico em add.
 
-##Instalando no projeto react
+Instalando no projeto react
 	no diretório raiz da aplicação:
 		npm install --save firebase
 
-##Usando no projeto
+Usando no projeto
 	import firebase from 'firebase';
 
 	copio e colo um código do firebase dentro do constructor do app principal (pelo menos por enquanto é no princiapl)
@@ -52,7 +52,7 @@
 		            firebase.app(); // if already initialized, use that one
 		        }
 
-##CÓDIGO FIREBASE  
+CÓDIGO FIREBASE  
 IMPORTANTE: O prof não colou todo esse código, colou apenas a parte que deixei acima
 	    no tópico "Usando no projeto".
 
