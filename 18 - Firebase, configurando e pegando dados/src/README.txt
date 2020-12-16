@@ -1,0 +1,92 @@
+#Fire base
+	É um serviço do google que permite criar uma API sem precisar usar uma linguagem de programação.
+
+	Possui plano gratuito e pago.
+
+##Criar aplicação web
+	preciso criar app web
+
+##Database
+	criar realtime database.
+	opções: 
+		locked mode: só deixa acessar se tiver autenticação
+		test mode: qualquer pessoa pode acessar o data base
+
+	###Usaremos um BD noSQL
+		funciona como uma árvore.
+		Ex: um nó representa as entidades Users, cada User tem um nó filho id que identifica cada user,
+		    cada nó id tem nós filhos que representam seus atributos.
+
+	###Criando
+		após selecionar a opção (test mode ou locked mode) criaremos a estrutra (árvore).
+		é só ir clicando no + para adicionar nós filhos. Depois clico em add.
+
+##Instalando no projeto react
+	no diretório raiz da aplicação:
+		npm install --save firebase
+
+##Usando no projeto
+	import firebase from 'firebase';
+
+	copio e colo um código do firebase dentro do constructor do app principal (pelo menos por enquanto é no princiapl)
+	código:
+		var firebaseConfig = {                                 //trocar var por let       
+		    apiKey: "AIzaSyA1Fz7Z3COh2otGbnax7DK-_BjO-wF7QCc",
+		    authDomain: "reactapp-b26f0.firebaseapp.com",
+		    projectId: "reactapp-b26f0",
+		    storageBucket: "reactapp-b26f0.appspot.com",
+		    messagingSenderId: "888102623108",
+		    appId: "1:888102623108:web:c0db8d317cf8f6c4086fd1",
+		    measurementId: "G-6KYCWH34K9"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+ 
+		###IMPORTATNE:
+		Deu erro ao inicializar ele no react.
+		solução:
+			if (!firebase.apps.length) {
+		            firebase.initializeApp(firebaseConfig); //firebaseConfig: var que criei acima
+		        }
+			else {
+		            firebase.app(); // if already initialized, use that one
+		        }
+
+##CÓDIGO FIREBASE  
+IMPORTANTE: O prof não colou todo esse código, colou apenas a parte que deixei acima
+	    no tópico "Usando no projeto".
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {                                                  //o prof copiou daqui. Trocar var por let.
+    apiKey: "AIzaSyA1Fz7Z3COh2otGbnax7DK-_BjO-wF7QCc",
+    authDomain: "reactapp-b26f0.firebaseapp.com",
+    projectId: "reactapp-b26f0",
+    storageBucket: "reactapp-b26f0.appspot.com",
+    messagingSenderId: "888102623108",
+    appId: "1:888102623108:web:c0db8d317cf8f6c4086fd1",
+    measurementId: "G-6KYCWH34K9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);                               //até aqui
+  firebase.analytics();
+</script>
+IMPORTATNE:
+	Deu erro ao inicializar ele no react.
+	solução:
+		if (!firebase.apps.length) {
+	            firebase.initializeApp({});
+	        }
+		else {
+	            firebase.app(); // if already initialized, use that one
+	        }
+
+
