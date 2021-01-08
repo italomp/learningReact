@@ -5,7 +5,7 @@ apenas os arquivos que eu criar, em cada estudo.
 
 ## Baixando:
 1 - Fazer o pull desse repositório. <br>
-2 - Criar um projeto, viar terminal, com o comando: <br>
+2 - Criar um projeto, via terminal, com o comando: <br>
 #### ```creat-react-app nomeDoApp```
 
 Após criar o novo projeto, basta susbtituir a pasta src do projeto que <br>
