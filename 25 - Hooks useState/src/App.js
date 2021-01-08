@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 /**
  * HOOKS
  * Na aula de hoje aprendi sobre useState.
- * Com ele podemos adicionar states e ciclos
- * de vida aos components definidos através
- * de funções.
+ * Com ele podemos adicionar states aos 
+ * components definidos através de funções.
  * 
  * Podemos também remover o monte de properties
  * que ficavam dentro do state e criar um state
