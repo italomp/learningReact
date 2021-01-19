@@ -39,7 +39,7 @@ function App() {
     event.preventDefault();
     setTasks([...tasks, input]);
     setInput("");
-  }, [input])
+  }, [input, tasks])
 
 
   const amountTasks = useMemo(() => tasks.length, [tasks]);
